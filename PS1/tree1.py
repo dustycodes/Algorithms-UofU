@@ -40,4 +40,3 @@ while index < len(timeArray):
     nods += 1
 
 print(nods+maximum+1)
-
