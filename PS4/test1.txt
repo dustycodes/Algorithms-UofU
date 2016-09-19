@@ -1,0 +1,17 @@
+6
+lv 25
+slc 15
+la 40
+sf 60
+sd 50
+se 10
+4
+slc lv
+lv la
+la sd
+la sf
+4
+slc sd
+lv sf
+slc se
+sd slc
