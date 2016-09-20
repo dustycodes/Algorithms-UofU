@@ -1,7 +1,10 @@
 #/usr/env python
 
-visit_number = 0
+visit_number = 1
 linearized_cities = []
+current_cost = []
+sources = []
+
 
 class City:
 
@@ -14,51 +17,76 @@ class City:
         self.post_number = -1
         self.pre_number = -1
 
-
 class Trip:
 
-    def __init__(self, from_index, to_index):
-        self.from_index = from_index
-        self.to_index = to_index
+    def __init__(self, from_city, to_city):
+        self.from_city = from_city
+        self.to_city = to_city
 
 
-def previsit(city):
-    global visit_number
-    city.pre_number = visit_number
-    visit_number += 1
+def linearize(cities):
+    global linearized_cities
+    while len(cities) != 0:
+        for city in cities:
+            if len(city.routes_in) == 0:
+                cities.remove(city)
 
+                for sub_city in city.routes_to:
+                    sub_city.routes_in.remove(city)
 
-def postvisit(city):
-    global visit_number, linearized_cities
-    city.post_number = visit_number
-    linearized_cities.insert(0, city)
-    visit_number += 1
+                linearized_cities.append(city)
 
+def dfs(trip):
+    global linearized_cities, current_cost
+    origin = trip.from_city
+    destination = trip.to_city
 
-def explore(cities, v):
-    v.visited = True
-    previsit(v)
+    if origin == destination:
+        print("0")
+        return
 
-    for ind in v.routes_to:
-        if cities[ind].visited is False:
-            explore(cities, cities[ind])
+    current_cost = []
+    for city in linearized_cities:
+        city.visited = False
 
-    postvisit(v)
+    index = linearized_cities.index(origin)
+    for city in linearized_cities[index:len(linearized_cities)]:
+        if city.visited is False:
+            cost = explore(linearized_cities, origin, origin, destination)
 
+    if len(current_cost) > 0:
+        minimum = min(current_cost)
+        if minimum != 0:
+            print(minimum)
+            return
 
-def dfs(cities):
-    for city_index in cities:
-        cities[city_index].visited = False
+    print("NO")
 
-    for city_index in cities:
-        if cities[city_index].visited is False:
-            explore(cities, cities[city_index])
+def explore(cities, origin, current, destination):
+    global linearized_cities, current_cost
+
+    if current == destination:
+        return current.toll
+
+    current.visited = True
+
+    cost = 0
+
+    for sub_city in current.routes_to:
+        if sub_city.visited is False:
+            c = explore(cities, origin, sub_city, destination)
+            if current == origin and c > 0:
+                current_cost.append(c)
+            elif c > 0:
+                cost = current.toll + c
+                break
+
+    return cost
 
 
 def main():
-    global linearized_cities
+    global linearized_cities, current_cost, list_of_cities
     cities = {}
-    city_names = {}
     number_of_cities = int(input())
     n = 0
     while n < number_of_cities:
@@ -66,24 +94,19 @@ def main():
         s = line.split()
         name = s[0]
         toll = int(s[1])
-        cities[n] = City(name, toll)
-        city_names[name] = n
+        cities[name] = City(name, toll)
         n += 1
 
-    adj_matrix = [[None] * number_of_cities for x in range(number_of_cities)]
     number_of_highways = int(input())
     h = 0
     while h < number_of_highways:
         line = input()
         s = line.split()
-        from_city = s[0]
-        to_city = s[1]
+        from_city_name = s[0]
+        to_city_name = s[1]
 
-        from_index = city_names[from_city]
-        to_index = city_names[to_city]
-        cities[from_index].routes_to.append(to_index)
-        cities[to_index].routes_in.append(from_index)
-        adj_matrix[from_index][to_index] = cities[to_index].toll
+        cities[from_city_name].routes_to.append(cities[to_city_name])
+        cities[to_city_name].routes_in.append(cities[from_city_name])
 
         h += 1
 
@@ -93,19 +116,18 @@ def main():
     while t < number_of_trips:
         line = input()
         s = line.split()
-        from_city = s[0]
-        to_city = s[1]
+        from_city_name = s[0]
+        to_city_name = s[1]
 
-        from_index = city_names[from_city]
-        to_index = city_names[to_city]
-        trips.append(Trip(from_index, to_index))
+        trips.append(Trip(cities[from_city_name], cities[to_city_name]))
 
         t += 1
 
-    dfs(cities)
+    list_of_cities = list(cities.values())
+    linearize(list_of_cities)
+
     for trip in trips:
-        f = cities[trip.from_index]
-        t = cities[trip.to_index]
+        dfs(trip)
 
 
 if __name__ == "__main__":

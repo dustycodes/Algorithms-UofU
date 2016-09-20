@@ -6,16 +6,15 @@ E 60
 C 50
 F 22
 G 21
-9
+8
 A B
 A D
 D B
 B E
-E D
-B C
+D E
 E C
-G E
-F G
+E G
+G F
 4
 A C
 B G
