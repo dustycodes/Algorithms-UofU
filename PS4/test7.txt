@@ -1,0 +1,19 @@
+6
+A 12
+B 10
+C 1
+D 10
+E 1
+F 1
+6
+A B
+A C
+C D
+B D
+D E
+E F
+1
+A F
+
+SOLUTIONS:
+13

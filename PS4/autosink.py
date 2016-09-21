@@ -1,91 +1,100 @@
 #/usr/env python
 
-visit_number = 1
-linearized_cities = []
-current_cost = []
-sources = []
+import copy
+
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return self.items == []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[len(self.items) - 1]
+
+    def size(self):
+        return len(self.items)
 
 
-class City:
-
+class AdjacencyListNode:
     def __init__(self, name, toll):
         self.name = name
         self.toll = toll
-        self.routes_to = []
-        self.routes_in = []
-        self.visited = False
-        self.post_number = -1
-        self.pre_number = -1
+
 
 class Trip:
+    def __init__(self, from_name, to_name):
+        self.from_name = from_name
+        self.to_name = to_name
 
-    def __init__(self, from_city, to_city):
-        self.from_city = from_city
-        self.to_city = to_city
 
+class AdjacencyGraph:
+    def __init__(self, names_of_cities):
+        self.stack = Stack()
+        self.adjacency_map = {}
+        self.distance_map = {}
+        for name in names_of_cities:
+            self.adjacency_map[name] = []
+            self.distance_map[name] = []
 
-def linearize(cities):
-    global linearized_cities
-    while len(cities) != 0:
-        for city in cities:
-            if len(city.routes_in) == 0:
-                cities.remove(city)
+    def add_edge(self, from_city, to_city):
+        node = to_city
+        self.adjacency_map[from_city.name].append(node)
 
-                for sub_city in city.routes_to:
-                    sub_city.routes_in.remove(city)
+    def topological_sort(self, name, visited, stack):
+        visited[name] = True
+        for node in self.adjacency_map[name]:
+            if visited[node.name] is False:
+                self.topological_sort(node.name, visited, stack)
 
-                linearized_cities.append(city)
+        stack.push(name)
 
-def dfs(trip):
-    global linearized_cities, current_cost
-    origin = trip.from_city
-    destination = trip.to_city
+    def build(self):
+        visited = {}
+        for vertice in self.adjacency_map.keys():
+            visited[vertice] = False
 
-    if origin == destination:
-        print("0")
-        return
+        for vertice in self.adjacency_map.keys():
+            if visited[vertice] is False:
+                self.topological_sort(vertice, visited, self.stack)
 
-    current_cost = []
-    for city in linearized_cities:
-        city.visited = False
+    def shortest_path(self, origin, destination):
+        distance = {}
 
-    index = linearized_cities.index(origin)
-    for city in linearized_cities[index:len(linearized_cities)]:
-        if city.visited is False:
-            cost = explore(linearized_cities, origin, origin, destination)
+        if len(self.distance_map[origin]) == 0:
+            if destination == origin:
+                print("0")
+                return
 
-    if len(current_cost) > 0:
-        minimum = min(current_cost)
-        if minimum != 0:
-            print(minimum)
-            return
+            for vert in self.adjacency_map.keys():
+                distance[vert] = float("inf")
+            distance[origin] = 0
 
-    print("NO")
+            stack_copy = copy.deepcopy(self.stack)
 
-def explore(cities, origin, current, destination):
-    global linearized_cities, current_cost
+            while stack_copy.is_empty() is False:
+                name = stack_copy.pop()
 
-    if current == destination:
-        return current.toll
+                if distance[name] != float("inf"):
+                    for node in self.adjacency_map[name]:
+                        if distance[node.name] > (distance[name] + node.toll):
+                            distance[node.name] = (distance[name] + node.toll)
 
-    current.visited = True
+            self.distance_map[origin] = distance
 
-    cost = 0
-
-    for sub_city in current.routes_to:
-        if sub_city.visited is False:
-            c = explore(cities, origin, sub_city, destination)
-            if current == origin and c > 0:
-                current_cost.append(c)
-            elif c > 0:
-                cost = current.toll + c
-                break
-
-    return cost
+        if self.distance_map[origin][destination] == float("inf"):
+            print("NO")
+        else:
+            print(self.distance_map[origin][destination])
 
 
 def main():
-    global linearized_cities, current_cost, list_of_cities
     cities = {}
     number_of_cities = int(input())
     n = 0
@@ -94,8 +103,10 @@ def main():
         s = line.split()
         name = s[0]
         toll = int(s[1])
-        cities[name] = City(name, toll)
+        cities[name] = AdjacencyListNode(name, toll)
         n += 1
+
+    graph = AdjacencyGraph(cities.keys())
 
     number_of_highways = int(input())
     h = 0
@@ -104,9 +115,7 @@ def main():
         s = line.split()
         from_city_name = s[0]
         to_city_name = s[1]
-
-        cities[from_city_name].routes_to.append(cities[to_city_name])
-        cities[to_city_name].routes_in.append(cities[from_city_name])
+        graph.add_edge(cities[from_city_name], cities[to_city_name])
 
         h += 1
 
@@ -119,15 +128,14 @@ def main():
         from_city_name = s[0]
         to_city_name = s[1]
 
-        trips.append(Trip(cities[from_city_name], cities[to_city_name]))
+        trips.append(Trip(from_city_name, to_city_name))
 
         t += 1
 
-    list_of_cities = list(cities.values())
-    linearize(list_of_cities)
+    graph.build()
 
     for trip in trips:
-        dfs(trip)
+        graph.shortest_path(trip.from_name, trip.to_name)
 
 
 if __name__ == "__main__":
