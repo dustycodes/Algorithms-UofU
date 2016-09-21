@@ -1,22 +1,14 @@
-7
-A 25
-B 15
-D 40
-E 60
-C 50
-F 22
-G 21
-8
+5
+A 1
+B 2
+C 3
+D 4
+E 6
+5
 A B
+B C
+D C
+A E
+E D
+1
 A D
-D B
-B E
-D E
-E C
-E G
-G F
-4
-A C
-B G
-E B
-F G
