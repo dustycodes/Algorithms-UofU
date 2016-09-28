@@ -1,0 +1,19 @@
+8
+Cam
+Art
+Edy
+Bea
+Dan
+Frank
+Gene
+Wade
+7
+Bea Edy
+Dan Bea
+Art Dan
+Frank Gene
+Art Gene
+Frank Cam
+Cam Wade
+1
+Dan

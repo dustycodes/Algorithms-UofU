@@ -1,0 +1,17 @@
+5
+a
+z
+x
+f
+v
+5
+a f
+z x
+a z
+z v
+f x
+1
+a
+
+#Solution
+a f z v x
