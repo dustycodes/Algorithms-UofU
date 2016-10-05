@@ -1,7 +1,5 @@
 #!/usr/env python2
 
-import heapq
-
 
 class Edge:
     def __init__(self, from_node, to_node, weight):
@@ -10,25 +8,28 @@ class Edge:
         self.w = weight
 
 
-class PrioritySet(object):
-    def __init__(self):
-        self.heap = []
-        self.set = set()
+class PriorityQueue:
+    def __init__(self, num, source):
+        self.m = {}
+        for i in range(0, num):
+            self.m[i] = float("inf")
 
-    def insert_or_change(self, node, priority):
-        if node not in self.set:
-            heapq.heappush(self.heap, (priority, node))
-            self.set.add(node)
-
-    def delete_min(self):
-        pri, d = heapq.heappop(self.heap)
-        self.set.remove(d)
-        return d
+        self.q = self.m.keys()
+        self.q.remove(source)
+        self.m[source] = 0
+        self.q.insert(0, source)
 
     def is_empty(self):
-        if len(self.heap) > 0:
+        if len(self.q) > 0:
             return False
         return True
+
+    def insert_or_change(self, v, w):
+        self.m[v] = w
+        self.q = sorted(self.m)
+
+    def delete_min(self):
+        return self.m[self.q.pop()]
 
 
 while True:
@@ -45,12 +46,11 @@ while True:
 
         dist = {}
         prev = {}
-        pq = PrioritySet()
+        pq = PriorityQueue(number_of_nodes,s)
         for u in range(number_of_nodes):
-            pq.insert_or_change(u, 1002)
             dist[u] = float("inf")
             prev[u] = None
-        pq.insert_or_change(s, 0)
+
         dist[s] = 0
 
         # Read in edges
@@ -69,7 +69,7 @@ while True:
                 if dist[edge.v] > dist[edge.u] + edge.w:
                     dist[edge.v] = dist[edge.u] + edge.w
                     prev[edge.v] = edge.u
-                    pq.insert_or_change(edge.v, dist[edge.v])
+                    pq.insert_or_change(v, dist[edge.v])
                     changed = True
 
             if changed is False:
