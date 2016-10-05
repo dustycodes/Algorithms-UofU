@@ -13,16 +13,13 @@ class Edge:
 class PrioritySet(object):
     def __init__(self):
         self.heap = []
-        self.set = set()
 
     def insert_or_change(self, node, priority):
-        if node not in self.set:
+        if node not in self.heap:
             heapq.heappush(self.heap, (priority, node))
-            self.set.add(node)
 
     def delete_min(self):
         pri, d = heapq.heappop(self.heap)
-        self.set.remove(d)
         return d
 
     def is_empty(self):
