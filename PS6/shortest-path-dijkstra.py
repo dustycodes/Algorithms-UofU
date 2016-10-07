@@ -10,43 +10,42 @@ class Edge:
 
 
 while True:
-    inp = raw_input()
 
-    if inp == "0 0 0 0":
-        break
-
-    arr = inp.split()
+    number_of_nodes, number_of_edges, number_of_queries, s = map(int, raw_input().split())
 
     # Begin test
-    if len(arr) == 4:
-        number_of_nodes, number_of_edges, number_of_queries, s = map(int, arr)
+    if number_of_nodes > 0:
 
         dist = {}
         prev = {}
         pq = []
+        pq_set = set()
+        E = {}
         for u in range(number_of_nodes):
-            dist[u] = float("inf")
+            dist[u] = 2002
             prev[u] = None
-            heapq.heappush(pq, (float("inf"), u))
+            E[u] = []
         dist[s] = 0
         heapq.heappush(pq, (0, s))
 
         # Read in edges
-        E = []
         m = 0
         while m < number_of_edges:
             # edge from u to v with weight of w
             u, v, w = map(int, raw_input().split())
-            E.append(Edge(u, v, w))
+            E[u].append(Edge(u, v, w))
             m += 1
 
         while len(pq) > 0:
             u = heapq.heappop(pq)
-            for edge in E:
-                if dist[edge.v] > dist[edge.u] + edge.w:
-                    dist[edge.v] = dist[edge.u] + edge.w
-                    prev[edge.v] = edge.u
-                    heapq.heappush(pq, (dist[v], v))
+            if u[1] not in pq_set:
+                pq_set.add(u[1])
+                for edge in E[u[1]]:
+                    if edge.v not in pq_set:
+                        if dist[edge.v] > dist[edge.u] + edge.w:
+                            dist[edge.v] = dist[edge.u] + edge.w
+                            prev[edge.v] = edge.u
+                            heapq.heappush(pq, (dist[edge.v], edge.v))
 
         # Read in Queries
         q = 0
@@ -61,3 +60,5 @@ while True:
             q += 1
 
         print("")
+    else:
+        break
