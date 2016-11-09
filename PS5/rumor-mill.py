@@ -3,6 +3,7 @@ import copy
 
 cost_list = {}
 
+
 def bfs(students, rumor_starter, sorted_names):
     global cost_list
     if len(cost_list[rumor_starter]) < 1:

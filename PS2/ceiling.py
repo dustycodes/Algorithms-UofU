@@ -18,6 +18,7 @@
 # Sample Output 2
 # 2
 
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -48,7 +49,7 @@ while it < number_of_prototypes:
         # insert node in BST
         while True:
             if current.value > node.value:
-                if current.left == None:
+                if current.left is None:
                     current.left = node
                     node_string += "L"
                     break
@@ -57,7 +58,7 @@ while it < number_of_prototypes:
                     node_string += "L"
                     continue
             elif current.value < node.value:
-                if current.right == None:
+                if current.right is None:
                     current.right = node
                     node_string += "R"
                     break
@@ -71,7 +72,7 @@ while it < number_of_prototypes:
         shape.append(node_string)
 
     shape.sort()
-    if ((shape in shapes) == False):
+    if ((shape in shapes) is False):
         shapes.append(shape)
 
 

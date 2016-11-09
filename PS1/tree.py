@@ -58,6 +58,7 @@ class Seedling:
             return True
         return False
 
+
 # begin program
 tiarray = tis.split()
 tiarray.sort()
