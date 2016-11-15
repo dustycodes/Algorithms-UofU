@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1dc1682-0a43-44c0-ab10-51c78dc6ebca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PS10/narrow-art-gallery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PS9/rainbow-no-memo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PS10/narrow-art-gallery.py" afterPath="$PROJECT_DIR$/PS10/narrow-art-gallery.py" />
     </list>
     <ignored path="algorithms-repo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +20,7 @@
     <SUITE FILE_PATH="coverage/algorithms-repo$rumor_mill.coverage" NAME="rumor-mill Coverage Results" MODIFIED="1475086117196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS5" />
     <SUITE FILE_PATH="coverage/algorithms-repo$shortest_path.coverage" NAME="shortest-path Coverage Results" MODIFIED="1477498005913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS6" />
     <SUITE FILE_PATH="coverage/algorithms-repo$sup.coverage" NAME="sup Coverage Results" MODIFIED="1477620996727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS7" />
-    <SUITE FILE_PATH="coverage/algorithms-repo$narrow_art_gallery.coverage" NAME="narrow-art-gallery Coverage Results" MODIFIED="1479228501380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS10" />
+    <SUITE FILE_PATH="coverage/algorithms-repo$narrow_art_gallery.coverage" NAME="narrow-art-gallery Coverage Results" MODIFIED="1479228742123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS10" />
     <SUITE FILE_PATH="coverage/algorithms-repo$autosink.coverage" NAME="autosink Coverage Results" MODIFIED="1474431547703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS4" />
     <SUITE FILE_PATH="coverage/algorithms-repo$ps7.coverage" NAME="ps7 Coverage Results" MODIFIED="1477509000877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PS7" />
   </component>
@@ -38,8 +36,8 @@
       <file leaf-file-name="narrow-art-gallery.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PS10/narrow-art-gallery.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+            <state relative-caret-position="150">
+              <caret line="21" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -979,8 +977,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PS10/narrow-art-gallery.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="150">
+          <caret line="21" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="8" />
           <folding />
         </state>
       </provider>
