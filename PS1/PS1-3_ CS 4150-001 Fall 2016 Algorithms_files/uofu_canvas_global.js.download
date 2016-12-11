@@ -1,0 +1,6 @@
+$(document).ready(function() {
+    var global_js_url = 'https://apps.tlt.utah.edu/uofu_canvas_global_prod.js';
+    $.getScript(global_js_url, function() {
+        console.log(global_js_url + ' loaded.');
+    });
+});

@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445 -->
+<html class=" lato-font-loaded" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>PS8-1: CS 4150-001 Fall 2016 Algorithms</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico">
+  <link rel="apple-touch-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/apple-touch-icon-585e5d997d.png">
+  
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vendor/timezone/America/Denver" src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/Denver.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vendor/timezone/en_US" src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/en_US.js.download"></script><!--<base target="_top">--><base href="." target="_top">
+<link rel="stylesheet" media="all" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/common-63fa977220.css">
+  <script type="text/javascript" async="" src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/javascripts/vendor/ie11-polyfill-d81c33fc47.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/lato-fontfaceobserver-b479c9e3e2.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://utah.instructure.com/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a20000">
+  <link rel="stylesheet" media="all" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/quizzes-574f649f9e.css">
+<link rel="stylesheet" media="all" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/learning_outcomes-474ee87a13.css">
+  
+  <link rel="stylesheet" media="all" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/uofu_canvas_global.css">
+  <script>
+    // listen for any clicks on links that have href="#" and queue them to be fired on dom ready.
+      function _earlyClick(e){
+        var cur = e.target || e.srcElement;
+        while ( cur && cur.ownerDocument ) {
+          if ( cur.getAttribute('href') == '#' ) {
+            e.preventDefault();
+            _earlyClick.clicks = _earlyClick.clicks || [];
+            _earlyClick.clicks.push(cur);
+            break;
+          }
+          cur = cur.parentNode;
+        }
+      }
+      document.addEventListener('click', _earlyClick);
+  </script>
+<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><script type="text/javascript" src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/finder.js.download"></script><style type="text/css"></style><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/InsertUpdateImageView-576a8e7d68.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/TreeBrowser-4d31810d2d.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/FindFlickrImageView-3605dd74b1.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/messageStudentsDialog-71cf06c9a8.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/PaginatedView-51f4bfd0c9.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/KeyboardShortcuts-76082103a1.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/MoveOutcomeDialog-185c129995.css" data-loaded-by-brandablecss="true"></head>
+
+<body class="with-left-side course-menu-expanded with-right-side padless-content quizzes primary-nav-expanded context-course_401191 webkit chrome no-touch">
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+    <header id="header" class="ic-app-header no-print ">
+    <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Main Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://utah.instructure.com/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://utah.instructure.com/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/158f8c1edbdd8389e3d8061ae09b3dc3" alt="Dusty Argyle">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://utah.instructure.com/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M231.6 94.2c-2.5-4.9-8.5-6.9-13.4-4.5l-57.3 28.6c-5.4-5.2-12.7-8.4-20.8-8.4 -16.6 0-30 13.5-30 30 0 16.6 13.5 30 30 30 16.6 0 30-13.5 30-30 0-1.3-0.1-2.5-0.2-3.8l57.3-28.6C232 105.2 234 99.2 231.6 94.2zM140 150c-5.5 0-10-4.5-10-10s4.5-10 10-10c5.5 0 10 4.5 10 10S145.6 150 140 150zM70 150H50c-5.5 0-10-4.5-10-10s4.5-10 10-10h20c5.5 0 10 4.5 10 10S75.5 150 70 150zM140 80c-5.5 0-10-4.5-10-10V50c0-5.5 4.5-10 10-10 5.5 0 10 4.5 10 10v20C150 75.5 145.5 80 140 80zM105 89.6c-3.5 0-6.8-1.8-8.7-5l-10-17.3c-2.8-4.8-1.1-10.9 3.7-13.7 4.8-2.8 10.9-1.1 13.7 3.7l10 17.3c2.8 4.8 1.1 10.9-3.7 13.7C108.4 89.1 106.7 89.6 105 89.6zM79.4 115.4c-1.7 0-3.4-0.4-5-1.3l-17.3-10c-4.8-2.8-6.4-8.9-3.7-13.7 2.8-4.8 8.9-6.4 13.7-3.7l17.3 10c4.8 2.8 6.4 8.9 3.7 13.7C86.2 113.6 82.8 115.4 79.4 115.4zM173.6 89.6c-1.7 0-3.4-0.4-5-1.3 -4.8-2.8-6.4-8.9-3.7-13.7l10-17.3c2.8-4.8 8.9-6.4 13.7-3.7 4.8 2.8 6.4 8.9 3.7 13.7l-10 17.3C180.4 87.8 177.1 89.6 173.6 89.6zM140 0C62.8 0 0 63 0 140.5V190c0 5.5 4.5 10 10 10h260c5.5 0 10-4.5 10-10v-49.5C280 63 217.2 0 140 0zM260 180H20v-39.5C20 74.1 73.8 20 140 20c66.2 0 120 54.1 120 120.5V180zM230 150h-20c-5.5 0-10-4.5-10-10s4.5-10 10-10h20c5.5 0 10 4.5 10 10S235.5 150 230 150z"></path></svg>
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://utah.instructure.com/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M226.2 259H32.3c-5.9 0-10.8-4.8-10.8-10.8v-43.5H10.8C4.8 204.8 0 199.9 0 194c0-6 4.8-10.8 10.8-10.8h10.8v-21.6H10.8c-5.9 0-10.8-4.8-10.8-10.8s4.8-10.8 10.8-10.8h10.8v-21.6H10.8c-5.9 0-10.8-4.8-10.8-10.8 0-6 4.8-10.8 10.8-10.8h10.8V75.4H10.8C4.8 75.4 0 70.6 0 64.7s4.8-10.8 10.8-10.8h10.8V10.8c0-6 4.8-10.8 10.8-10.8h193.9c5.9 0 10.8 4.8 10.8 10.8v21.6h32.3c5.9 0 10.8 4.8 10.8 10.8v172.4c0 6-4.8 10.8-10.8 10.8H237v21.9C237 254.2 232.2 259 226.2 259zM43.1 237.4h172.4V21.6H43.1v32.3h10.7c5.9 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8H43.1V97h10.7c5.9 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8H43.1v21.6h10.7c5.9 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8H43.1v21.6h10.7c5.9 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8H43.1V237.4zM237 204.8h21.5v-21.6H237V204.8zM237 161.7h21.5v-21.6H237V161.7zM237 118.5h21.5V97H237V118.5zM237 75.4h21.5V53.9H237V75.4zM172.2 129.3H96.9c-5.9 0-10.8-4.8-10.8-10.8V64.7c0-6 4.8-10.8 10.8-10.8h75.3c5.9 0 10.8 4.8 10.8 10.8v53.9C183 124.5 178.2 129.3 172.2 129.3zM107.7 107.8h53.8V75.4h-53.8V107.8z"></path></svg>
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_groups_link" href="https://utah.instructure.com/groups" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--groups" viewBox="0 0 200 135"><path d="M134.5 129.4c0-1.1 0-19.8-6.2-31.1-4.5-8.5-16.4-12.4-35-19.2-1.7-.6-3.4-1.1-5.1-1.7v-8.5c5.6-5.1 8.5-12.4 8.5-20.3V29.4C96.6 13 83.6 0 67.2 0S37.9 13 37.9 29.4v19.2c0 7.3 3.4 14.7 8.5 20.3v8.5c-1.7.6-3.4 1.1-5.1 1.7-18.6 6.2-30.5 10.7-35 19.2C0 109.6 0 128.8 0 129.4c0 3.4 2.3 5.6 5.6 5.6h123.7c3.5 0 5.7-2.3 5.2-5.6zm-123.2-5.7c.6-5.6 1.7-14.7 3.4-19.8C17 98.8 30 94.3 43.5 89.8c2.8-1.1 5.6-2.3 9-3.4 2.3-.6 4-2.8 4-5.1V66.7c0-1.7-.6-3.4-1.7-4.5-4-3.4-6.2-8.5-6.2-13.6V29.4c0-10.2 7.9-18.1 18.1-18.1s18.1 7.9 18.1 18.1v19.2c0 5.1-2.3 10.2-6.2 13.6-1.1 1.1-1.7 2.8-1.7 4.5v14.7c0 2.3 1.7 4.5 4 5.1 2.8 1.1 6.2 2.3 9 3.4 13.6 5.1 26.6 9.6 28.8 14.1 2.8 5.1 4 13.6 4.5 19.8H11.3zM196 79.1c-2.8-6.2-11.3-9.6-22.6-13.6l-1.7-.6v-3.4c4.5-4 6.8-9.6 6.8-15.8V35c0-12.4-9.6-22-22-22s-22 10.2-22 22v10.7c0 6.2 2.3 11.9 6.8 15.8V65l-1.7.6c-7.3 2.8-13 4.5-16.9 7.3-1.7 1.1-2.3 2.8-2.3 5.1.6 1.7 1.7 3.4 3.4 4.5 7.9 4 12.4 7.3 14.1 10.7 2.3 4.5 4 10.2 5.1 18.1.6 2.3 2.8 4.5 5.6 4.5h45.8c3.4 0 5.6-2.8 5.6-5.1 0-3.9 0-24.3-4-31.6zm-42.9 25.4c-1.1-6.8-2.8-12.4-5.1-16.9-1.7-4-5.1-6.8-9.6-10.2 1.7-1.1 3.4-1.7 5.1-2.3l5.6-2.3c1.7-.6 3.4-2.8 3.4-5.1v-9.6c0-1.7-.6-3.4-2.3-4.5-2.8-1.7-4.5-5.1-4.5-8.5V34.5c0-6.2 4.5-10.7 10.7-10.7s10.7 5.1 10.7 10.7v10.7c0 3.4-1.7 6.2-4.5 8.5-1.1 1.1-2.3 2.8-2.3 4.5v10.2c0 2.3 1.1 4.5 3.4 5.1l5.6 2.3c6.8 2.3 15.3 5.6 16.4 7.9 1.7 2.8 2.8 12.4 2.8 20.9h-35.4z"></path></svg>
+
+                </div>
+                <div class="menu-item__text">
+                  Groups
+                </div>
+              </a>
+            </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://utah.instructure.com/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M268.3 280H11.7C5.2 280 0 274.8 0 268.3V35c0-6.4 5.2-11.7 11.7-11.7h35V11.7C46.7 5.2 51.9 0 58.3 0h35C99.8 0 105 5.2 105 11.7v11.7h70V11.7C175 5.2 180.2 0 186.7 0h35c6.4 0 11.7 5.2 11.7 11.7v11.7h35c6.4 0 11.7 5.2 11.7 11.7v233.3C280 274.8 274.8 280 268.3 280zM23.3 256.7h233.3v-210h-23.3v11.7c0 6.4-5.2 11.7-11.7 11.7h-35c-6.4 0-11.7-5.2-11.7-11.7V46.7h-70v11.7c0 6.4-5.2 11.7-11.7 11.7h-35c-6.4 0-11.7-5.2-11.7-11.7V46.7H23.3V256.7zM198.3 46.7H210V23.3h-11.7V46.7zM70 46.7h11.7V23.3H70V46.7zM198.3 245c-6.4 0-11.7-5.2-11.7-11.7v-11.7h-35v11.7c0 6.4-5.2 11.7-11.7 11.7 -6.4 0-11.7-5.2-11.7-11.7v-11.7h-35v11.7c0 6.4-5.2 11.7-11.7 11.7S70 239.8 70 233.3v-11.7H46.7c-6.4 0-11.7-5.2-11.7-11.7s5.2-11.7 11.7-11.7H70V175H46.7c-6.4 0-11.7-5.2-11.7-11.7 0-6.4 5.2-11.7 11.7-11.7H70v-23.3H46.7c-6.4 0-11.7-5.2-11.7-11.7S40.2 105 46.7 105H70V93.3c0-6.4 5.2-11.7 11.7-11.7s11.7 5.2 11.7 11.7V105h35V93.3c0-6.4 5.2-11.7 11.7-11.7 6.4 0 11.7 5.2 11.7 11.7V105h35V93.3c0-6.4 5.2-11.7 11.7-11.7 6.4 0 11.7 5.2 11.7 11.7V105h23.3c6.4 0 11.7 5.2 11.7 11.7s-5.2 11.7-11.7 11.7H210v23.3h23.3c6.4 0 11.7 5.2 11.7 11.7 0 6.4-5.2 11.7-11.7 11.7H210v23.3h23.3c6.4 0 11.7 5.2 11.7 11.7s-5.2 11.7-11.7 11.7H210v11.7C210 239.8 204.8 245 198.3 245zM151.7 198.3h35V175h-35V198.3zM93.3 198.3h35V175h-35V198.3zM151.7 151.7h35v-23.3h-35V151.7zM93.3 151.7h35v-23.3h-35V151.7z"></path></svg>
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://utah.instructure.com/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M93.3 105c0-6.4 5.2-11.7 11.7-11.7h70c6.4 0 11.7 5.2 11.7 11.7s-5.2 11.7-11.7 11.7h-70C98.6 116.7 93.3 111.4 93.3 105zM105 70h23.3c6.4 0 11.7-5.2 11.7-11.7s-5.2-11.7-11.7-11.7H105c-6.4 0-11.7 5.2-11.7 11.7S98.6 70 105 70zM280 198.3v70c0 6.4-5.2 11.7-11.7 11.7H11.7C5.2 280 0 274.8 0 268.3v-69.8c0-1.1 0.1-2.2 0.4-3.3 0.3-1.1 0.8-2.1 1.3-3L36.7 134c2.1-3.5 5.9-5.7 10-5.7h11.7V11.7C58.3 5.2 63.6 0 70 0h140c6.4 0 11.7 5.2 11.7 11.7v116.7h11.7c4.1 0 7.9 2.1 10 5.7l35 58.3c0.1 0.2 0.1 0.5 0.3 0.7 0.4 0.7 0.6 1.4 0.8 2.2 0.2 0.8 0.4 1.5 0.5 2.3C279.9 197.8 280 198.1 280 198.3zM32.3 186.7h67.9c6.4 0 11.7 5.2 11.7 11.7V210c0 7.8 3.5 7.8 6 7.8h48.7c5.7 0 10.5-3.6 10.5-7.8v-11.7c0-6.4 5.2-11.7 11.7-11.7h59l-21-35h-5.1v11.7c0 6.4-5.2 11.7-11.7 11.7s-11.7-5.2-11.7-11.7v-140H81.7v140c0 6.4-5.2 11.7-11.7 11.7s-11.7-5.2-11.7-11.7v-11.7h-5.1L32.3 186.7zM256.7 210h-56.3c0 17.2-15.2 31.1-33.8 31.1h-48.7c-17.6 0-29.4-12.5-29.4-31.1H23.3v46.7h233.3V210zM175 163.3c6.4 0 11.7-5.2 11.7-11.7 0-6.4-5.2-11.7-11.7-11.7h-70c-6.4 0-11.7 5.2-11.7 11.7 0 6.4 5.2 11.7 11.7 11.7H175z"></path></svg>
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100 200C44.9 200 0 155.1 0 100 0 44.9 44.9 0 100 0s100 44.9 100 100C200 155.1 155.1 200 100 200zM100 20c-44.1 0-80 35.9-80 80s35.9 80 80 80 80-35.9 80-80S144.1 20 100 20z"></path><path d="M110 130H90v-30h10c11 0 20-9 20-20 0-11-9-20-20-20s-20 9-20 20H60c0-22.1 17.9-40 40-40s40 17.9 40 40c0 18.6-12.8 34.3-30 38.7V130z"></path><circle cx="100" cy="150" r="12.5"></circle></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div role="region" aria-label="Secondary Navigation" class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <span aria-live="polite">
+              <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                  Minimize global navigation" title="
+                  Minimize global navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <polygon points="20.6 9.4 23.4 6.6 32.8 16 23.4 25.4 20.6 22.6 25.2 18 0 18 0 14 25.2 14 "></polygon><rect x="36" width="4" height="32"></rect>
+</svg>
+
+              </button>
+            </span>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link Button--small ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses menu" title="Hide courses menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://utah.instructure.com/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://utah.instructure.com/courses/401191"><span class="ellipsible">CS 4150-001 Fall 2016</span></a></li><li><a href="https://utah.instructure.com/courses/401191/quizzes"><span class="ellipsible">Quizzes</span></a></li><li><a href="https://utah.instructure.com/courses/401191/quizzes/844415"><span class="ellipsible">PS8-1</span></a></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div id="left-side" class="ic-app-course-menu list-view">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Fall 2016</span>
+            <nav role="navigation" aria-label="context"><ul id="section-tabs"><li class="section"><a href="https://utah.instructure.com/courses/401191" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/assignments/syllabus" class="syllabus" tabindex="0">Syllabus</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/announcements" class="announcements" aria-label="Course Announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/discussion_topics" class="discussions" aria-label="Course Discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/assignments" class="assignments" aria-label="Course Assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/grades" class="grades" aria-label="Course Grades" tabindex="0">Grades</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/external_tools/21225" class="context_external_tool_21225" tabindex="0">Media Gallery</a></li><li class="section"><a href="https://utah.instructure.com/courses/401191/external_tools/21226" class="context_external_tool_21226" tabindex="0">My Media</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+
+
+
+<div id="quiz_show">
+
+  <header class="quiz-header">
+
+
+    <h1 id="quiz_title">
+      PS8-1
+    </h1>
+
+
+    <div class="row-fluid">
+        <div id="quiz_details_wrapper" data-url="https://utah.instructure.com/courses/401191/quizzes/844415/managed_quiz_data" data-submitted-count=""></div>
+    </div>
+    <div class="row-fluid">
+        <ul id="quiz_student_details">
+  <li>
+    <span class="title">Due</span>
+    <span class="value">
+        <span data-html-tooltip-title="Nov 3 at 11:59pm">
+          Nov 3 at 11:59pm
+        </span>
+    </span>
+  </li>
+
+  <li style="">
+    <span class="title">Points</span>
+    <span class="value">16</span>
+  </li>
+
+  <li>
+    <span class="title">Questions</span>
+    <span class="value">8</span>
+  </li>
+    <li>
+    <span class="title">Available</span>
+    <span class="value">
+        until Nov 6 at 11:59pm
+    </span>
+  </li>
+
+  <li>
+    <span class="title">Time Limit</span>
+    <span class="value">
+        None
+    </span>
+  </li>
+
+    <li>
+      <span class="title">Allowed Attempts</span>
+      <span class="value">
+          Unlimited
+      </span>
+    </li>
+
+</ul>
+
+
+    <h2>Instructions</h2>
+    <div class="description user_content student-version enhanced">
+      <p><span style="font-weight: bold;">Kruskal's Algorithm</span><br><br>Consider the graph below.&nbsp;</p>
+<p><img src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/preview" alt="mst.png" style="max-width: 850px;"></p>
+<p>If Kruskal's algorithm (whose implementation is given in the slides from class) is run on this graph, in what order will the edges be incorporated into the MST?<br><br><span style="font-weight: bold;">Important:</span>&nbsp; To specify an edge, give its endpoints in alphabetical order using capital letters and no punctutation.&nbsp; For example, the leftmost edge is AE, <span style="font-style: italic;">not </span>EA.<br><br>In case of ties, prefer the edge that occurs first in alphabetical order.&nbsp; For example, if you're choosing between BC and BF, prefer BC.</p>
+    </div>
+
+    </div>
+
+          <div class="lock_explanation">
+            This quiz was locked Nov 6 at 11:59pm.
+          </div>
+
+    <div id="quiz-submission-version-table" style="height: auto; opacity: 1; display: block;">  <div class="desc">
+    <h3>Attempt History</h3>
+  </div>
+  <table class="ic-Table ic-Table--condensed" summary="A table that shows your quiz attempt history. Each attempt is on the left side. The attempt, time, and score are across the top.">
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col">Attempt</th>
+        <th scope="col">Time</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+        <tr class="">
+  <th scope="row" class="ic-Table--header-row">
+      LATEST
+  </th>
+  <td>
+    <a href="https://utah.instructure.com/courses/401191/quizzes/844415/history?version=1">
+      Attempt 1
+    </a>
+  </td>
+  <td>
+    10 minutes
+  </td>
+
+    <td>
+      16 out of 16
+      
+    </td>
+</tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+  </header>
+
+      <div class="quiz-submission ">
+
+
+<div class="quiz_score" style="">
+    Score for this attempt:
+  <span class="score_value">16</span> out of 16
+  
+    </div>
+<div>
+  Submitted Oct 31 at  4:42pm
+</div>
+<div class="quiz_duration" style="">
+  This attempt took 10 minutes.
+</div>
+<div id="questions" class="assessment_results  show_correct_answers">
+  <div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552311"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552311">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 1</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552311" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">40023919</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;What edge is added first?&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_16552311_question_text" class="question_text user_content enhanced">
+          <p>What edge is added first?</p>
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552311" value="AB" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_67760" style="" title="AB. This was the correct answer.">
+
+
+      <span class="hidden id">67760</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-67760">
+        <div class="answer_text">AB</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="AB">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">AB</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">67760</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_66252" style="" title="BA. This was the correct answer.">
+
+
+      <span class="hidden id">66252</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-66252">
+        <div class="answer_text">BA</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="BA">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">BA</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">66252</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552312"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552312">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 2</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552312" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What edge is added second?</textarea>
+      </div>
+      <div id="question_16552312_question_text" class="question_text user_content enhanced">
+          What edge is added second?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552312" value="DG" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_94830" style="" title="DG. This was the correct answer.">
+
+
+      <span class="hidden id">94830</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-94830">
+        <div class="answer_text">DG</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="DG">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">DG</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">94830</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_89323" style="" title="GD. This was the correct answer.">
+
+
+      <span class="hidden id">89323</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-89323">
+        <div class="answer_text">GD</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="GD">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">GD</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">89323</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552313"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552313">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 3</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552313" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What edge is added third?</textarea>
+      </div>
+      <div id="question_16552313_question_text" class="question_text user_content enhanced">
+          What edge is added third?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552313" value="FG" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_31213" style="" title="FG. This was the correct answer.">
+
+
+      <span class="hidden id">31213</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-31213">
+        <div class="answer_text">FG</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="FG">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">FG</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">31213</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_95042" style="" title="GF. This was the correct answer.">
+
+
+      <span class="hidden id">95042</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-95042">
+        <div class="answer_text">GF</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="GF">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">GF</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">95042</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552314"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552314">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 4</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552314" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What edge is added fourth?</textarea>
+      </div>
+      <div id="question_16552314_question_text" class="question_text user_content enhanced">
+          What edge is added fourth?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552314" value="GH" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_15107" style="" title="GH. This was the correct answer.">
+
+
+      <span class="hidden id">15107</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-15107">
+        <div class="answer_text">GH</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="GH">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">GH</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">15107</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_27716" style="" title="HG. This was the correct answer.">
+
+
+      <span class="hidden id">27716</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-27716">
+        <div class="answer_text">HG</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="HG">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">HG</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">27716</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552315"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552315">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 5</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552315" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What edge is added fifth?</textarea>
+      </div>
+      <div id="question_16552315_question_text" class="question_text user_content enhanced">
+          What edge is added fifth?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552315" value="BC" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_1094" style="" title="BC. This was the correct answer.">
+
+
+      <span class="hidden id">1094</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-1094">
+        <div class="answer_text">BC</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="BC">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">BC</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">1094</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_54156" style="" title="CB. This was the correct answer.">
+
+
+      <span class="hidden id">54156</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-54156">
+        <div class="answer_text">CB</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="CB">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">CB</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">54156</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552316"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552316">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 6</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552316" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What edge is added sixth?</textarea>
+      </div>
+      <div id="question_16552316_question_text" class="question_text user_content enhanced">
+          What edge is added sixth?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552316" value="CG" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_41938" style="" title="CG. This was the correct answer.">
+
+
+      <span class="hidden id">41938</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-41938">
+        <div class="answer_text">CG</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="CG">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">CG</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">41938</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_15765" style="" title="GC. This was the correct answer.">
+
+
+      <span class="hidden id">15765</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-15765">
+        <div class="answer_text">GC</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="GC">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">GC</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">15765</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552317"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552317">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 7</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552317" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What edge is added seventh?</textarea>
+      </div>
+      <div id="question_16552317_question_text" class="question_text user_content enhanced">
+          What edge is added seventh?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552317" value="AE" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_59039" style="" title="AE. This was the correct answer.">
+
+
+      <span class="hidden id">59039</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-59039">
+        <div class="answer_text">AE</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="AE">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">AE</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">59039</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_63929" style="" title="EA. This was the correct answer.">
+
+
+      <span class="hidden id">63929</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-63929">
+        <div class="answer_text">EA</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="EA">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">EA</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">63929</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_16552318"></a>
+  <div class="display_question question short_answer_question  correct   " id="question_16552318">
+    <div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 8</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                2
+          <span class="points question_points"> / 2</span> pts
+        </div>
+    </span>
+    </div>
+    <div class="links" style="display: none;">
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+      <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+    </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">short_answer_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://utah.instructure.com/courses/401191/quizzes/844415/questions/16552318" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">&nbsp;</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">What is the total weight of the minimum spanning tree?</textarea>
+      </div>
+      <div id="question_16552318_question_text" class="question_text user_content enhanced">
+          What is the total weight of the minimum spanning tree?
+      </div>
+      <div class="answers">
+              <div>
+                  <div class="answer selected_answer correct_answer no_answer"><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct!</span>
+                    <div>
+  <input type="text" name="question_16552318" value="12" class="question_input" autocomplete="off" readonly="&quot;readonly&quot;/" aria-describedby="user_answer_NaN_arrow" style="width: 19px;">
+
+</div>
+
+
+                  </div>
+              </div>
+                <div class="answers_wrapper" aria-describedby="user_answer_NaN_arrow"><span class="answer_arrow info" style="left: -128px; top: 5px;" id="user_answer_NaN_arrow">Correct Answers</span>
+                      <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_34894" style="" title="12. This was the correct answer.">
+
+
+      <span class="hidden id">34894</span>
+
+    <div class="select_answer answer_type">
+      <label for="answer-34894">
+        <div class="answer_text">12</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 19px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="12">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">12</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">34894</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+</div>
+  <div id="update_scores">
+
+
+<div class="quiz_score" style="text-align: right; font-size: 1.2em; ">
+    Quiz Score:
+  <span class="score_value">16</span> out of 16
+</div>
+</div> <!-- #speed_update_scores || #update_scores -->
+</div>
+
+
+
+
+  <div id="module_sequence_footer"><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://utah.instructure.com/courses/401191/modules/items/4404292" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-download&#39;&gt;&lt;/i&gt; CS 4150 Disjoint Sets Radix Sort.pptx" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: CS 4150 Disjoint Sets Radix Sort.pptx</span>
+      </a>
+    
+
+    
+      <a href="https://utah.instructure.com/courses/401191/modules/items/4679446" role="button" class="Button module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-quiz&#39;&gt;&lt;/i&gt; PS8-2" aria-describedby="msf0-next-desc">
+        Next<i class="icon-mini-arrow-right"></i>
+        <span id="msf0-next-desc" class="hidden" hidden="">Next: PS8-2</span>
+      </a>
+    
+  </div>
+</div>
+</div>
+
+</div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+                <div id="sidebar_content" class="rs-margin-bottom">
+      <ul class="page-action-list" style="display:none;">
+        <h2>Related Items</h2>
+
+
+      </ul>
+    </div>
+
+          <div>
+    <div style="border-bottom: 1px solid #888; font-size: 1.1em; font-weight: bold;">
+        Last Attempt Details:
+    </div>
+    <div>
+    <table class="summary" style="font-size: 1.1em;">
+      <tbody>
+        <tr>
+          <th>Time:</th>
+          <td>10 minutes</td>
+        </tr>
+        <tr style="">
+          <th>Current Score:</th>
+          <td>16 out of 16
+                  </td>
+        </tr>
+        <tr style="">
+          <th>Kept Score:</th>
+          <td>16 out of 16</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+      <div style="margin-left: 20px; margin-top: 20px; line-height: 1.3em;">
+          Unlimited Attempts<br>
+      </div>
+
+
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">567af4b1-7e21-4c2d-b3f3-342e09950cc1</div>
+        <a id="equella_endpoint_url" href="https://utah.equella.ecollege.com/signon.do">&nbsp;</a>
+        <a id="equella_callback_url" href="https://utah.instructure.com/external_content/success/equella">&nbsp;</a>
+        <a id="equella_cancel_url" href="https://utah.instructure.com/external_content/cancel/equella">&nbsp;</a>
+        <a id="equella_action" href="https://utah.instructure.com/courses/401191/quizzes/selectOrAdd">&nbsp;</a>
+    </div>
+    <div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don't have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://utah.instructure.com/courses/401191/quizzes/844415?module_item_id=4679445#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"www.kaltura.com","resource_domain":"cdn.kaltura.com","rtmp_domain":"","partner_id":"670542","subpartner_id":"67054200","player_ui_conf":"5248922","kcw_ui_conf":"1480252","upload_ui_conf":"10422241","max_file_size_bytes":2147483648,"do_analytics":true,"hide_rte_button":true,"js_uploader":false},"equellaEnabled":true,"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"UEN eMedia","id":4095,"url":"http:\/\/eq-access.uen.org","icon_url":"https:\/\/eq.uen.org\/emedia\/entity\/11215465\/e_icon.png","canvas_icon_class":null,"width":800,"height":800},{"name":"Embed Kaltura Media","id":21225,"url":"https:\/\/670542.kaf.kaltura.com\/browseandembed\/index\/browseandembed","icon_url":"https:\/\/cdnsecakmi.kaltura.com\/content\/uiconf\/canvas\/kaltura_sun.png","canvas_icon_class":null,"width":1100,"height":600},{"name":"Films On Demand","id":22551,"url":"https:\/\/lti.films.com\/LtiSearch.aspx","icon_url":"http:\/\/fod.infobase.com\/images\/LTI_logo.png","canvas_icon_class":null,"width":920,"height":636},{"name":"Upload\/Embed Image","id":22701,"url":"https:\/\/multitool.ciditools.com\/cropped\/controller.php","icon_url":"https:\/\/multitool.ciditools.com\/cropped\/croppedIcon.png","canvas_icon_class":null,"width":750,"height":600}]};
+  ENV = {"ASSET_HOST":"https:\/\/du11hjcvx0uqb.cloudfront.net","active_brand_config":"1a719e38c897aec3fa02962714d570fb","active_brand_config_json_url":"https:\/\/du11hjcvx0uqb.cloudfront.net\/dist\/brandable_css\/1a719e38c897aec3fa02962714d570fb\/variables-8cf919bc8524fb9c9655c94ea1375cc7.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":"https:\/\/du11hjcvx0uqb.cloudfront.net\/dist\/brandable_css\/1a719e38c897aec3fa02962714d570fb\/new_styles_normal_contrast\/bundles\/what_gets_loaded_inside_the_tinymce_editor-da765ef8c0.css","current_user_id":"709280","current_user":{"id":"709280","display_name":"Dusty Argyle","avatar_image_url":"https:\/\/secure.gravatar.com\/avatar\/158f8c1edbdd8389e3d8061ae09b3dc3?s=50\u0026d=https%3A%2F%2Futah.instructure.com%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https:\/\/utah.instructure.com\/about\/709280"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster2-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":20000000000014,"k12":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"SETTINGS":{"open_registration":true,"eportfolios_enabled":true,"collapse_global_nav":false,"show_feedback_link":true},"page_view_update_url":"\/page_views\/567af4b1-7e21-4c2d-b3f3-342e09950cc1?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY3YWY0YjEtN2UyMS00YzJkLWIzZjMtMzQyZTA5OTUwY2MxIiwidSI6MjAwMDAwMDA3MDkyODAsImMiOiIyMDE2LTEyLTExVDAzOjA4OjU2LjQxWiJ9.gwxKLqghQeZv3uVdRi1y3TzStQEGQMcjr0N32ZtqjIM","context_asset_string":"course_401191","ping_url":"https:\/\/utah.instructure.com\/api\/v1\/courses\/401191\/ping","TIMEZONE":"America\/Denver","CONTEXT_TIMEZONE":"America\/Denver","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","RICH_CONTENT_SERVICE_ENABLED":false,"SUBMISSION_DOWNLOAD_DIALOG_TITLE":"Download All Quiz File Upload Submissions","UPLOAD_URL":"\/api\/v1\/courses\/401191\/quizzes\/844415\/submissions\/self\/files","SUBMISSION_VERSIONS_URL":"https:\/\/utah.instructure.com\/courses\/401191\/quizzes\/844415\/submission_versions","QUIZ_SUBMISSION_EVENTS_URL":"https:\/\/utah.instructure.com\/api\/v1\/courses\/401191\/quizzes\/844415\/submissions\/10614609\/events","ATTACHMENTS":{},"CONTEXT_ACTION_SOURCE":"quizzes","COURSE_ID":401191,"LOCKDOWN_BROWSER":null,"QUIZ":{"id":"844415","title":"PS8-1","html_url":"https:\/\/utah.instructure.com\/courses\/401191\/quizzes\/844415","mobile_url":"https:\/\/utah.instructure.com\/courses\/401191\/quizzes\/844415?force_user=1\u0026persist_headless=1","description":"\u003cp\u003e\u003cspan style=\"font-weight: bold;\"\u003eKruskal's Algorithm\u003c\/span\u003e\u003cbr\u003e\u003cbr\u003eConsider the graph below.\u00a0\u003c\/p\u003e\n\u003cp\u003e\u003cimg src=\"https:\/\/utah.instructure.com\/courses\/401191\/files\/60920586\/preview\" alt=\"mst.png\" data-api-endpoint=\"https:\/\/utah.instructure.com\/api\/v1\/courses\/401191\/files\/60920586\" data-api-returntype=\"File\"\u003e\u003c\/p\u003e\n\u003cp\u003eIf Kruskal's algorithm (whose implementation is given in the slides from class) is run on this graph, in what order will the edges be incorporated into the MST?\u003cbr\u003e\u003cbr\u003e\u003cspan style=\"font-weight: bold;\"\u003eImportant:\u003c\/span\u003e\u00a0 To specify an edge, give its endpoints in alphabetical order using capital letters and no punctutation.\u00a0 For example, the leftmost edge is AE, \u003cspan style=\"font-style: italic;\"\u003enot \u003c\/span\u003eEA.\u003cbr\u003e\u003cbr\u003eIn case of ties, prefer the edge that occurs first in alphabetical order.\u00a0 For example, if you're choosing between BC and BF, prefer BC.\u003c\/p\u003e","quiz_type":"assignment","time_limit":null,"shuffle_answers":false,"show_correct_answers":true,"scoring_policy":"keep_latest","allowed_attempts":-1,"one_question_at_a_time":false,"question_count":8,"points_possible":16.0,"cant_go_back":false,"ip_filter":null,"due_at":"2016-11-04T05:59:00Z","lock_at":"2016-11-07T06:59:00Z","unlock_at":null,"published":true,"locked_for_user":true,"lock_info":{"asset_string":"quizzes:quiz_844415","lock_at":"2016-11-07T06:59:00Z","can_view":true},"lock_explanation":"This quiz was locked Nov 6 at 11:59pm.","hide_results":null,"show_correct_answers_at":"2016-11-07T06:59:00Z","hide_correct_answers_at":null,"all_dates":[{"due_at":"2016-11-04T05:59:00Z","unlock_at":null,"lock_at":"2016-11-07T06:59:00Z","base":true}],"can_update":false,"require_lockdown_browser":null,"require_lockdown_browser_for_results":null,"require_lockdown_browser_monitor":null,"lockdown_browser_monitor_data":"","permissions":{"read_statistics":false,"manage":false,"read":true,"update":false,"create":false,"submit":true,"preview":false,"delete":false,"grade":false,"review_grades":false,"view_answer_audits":false},"quiz_reports_url":"https:\/\/utah.instructure.com\/api\/v1\/courses\/401191\/quizzes\/844415\/reports","quiz_statistics_url":"https:\/\/utah.instructure.com\/api\/v1\/courses\/401191\/quizzes\/844415\/statistics","quiz_submission_versions_html_url":"https:\/\/utah.instructure.com\/courses\/401191\/quizzes\/844415\/submission_versions","assignment_id":"3215418","one_time_results":false,"assignment_group_id":"611540","show_correct_answers_last_attempt":false,"version_number":6,"question_types":["short_answer_question"],"has_access_code":false,"post_to_sis":null},"QUIZZES_URL":"https:\/\/utah.instructure.com\/courses\/401191\/quizzes","SIS_SOURCE_ID":"1168-16799","SIS_USER_ID":"u0770958","IS_SURVEY":false,"badge_counts":{"submissions":0},"notices":[]};
+
+    // TODO: move this out when we have a single require call
+    require = {
+      translate: true,
+      baseUrl: '/optimized',
+      paths: {
+    "ember":"bower\/ember\/ember",
+    "common":"compiled\/bundles\/common",
+    "jqueryui":"vendor\/jqueryui",
+    "handlebars":"symlink_to_node_modules\/handlebars\/dist\/handlebars.runtime",
+    "..\/..\/node_modules\/axios":"symlink_to_node_modules\/axios\/dist\/axios",
+    "node_modules-version-of-backbone":"symlink_to_node_modules\/backbone\/backbone",
+    "node_modules-version-of-moment":"symlink_to_node_modules\/moment\/min\/moment-with-locales",
+    "node_modules-version-of-react-modal":"symlink_to_node_modules\/react-modal\/dist\/react-modal",
+    "moment":"custom_moment_locales\/mi_nz",
+    "react-addons-css-transition-group":"react-addons-css-transition-group_requireJS",
+    "react-addons-pure-render-mixin":"react-addons-pure-render-mixin_requireJS",
+    "react-addons-test-utils":"react-addons-test-utils_requireJS",
+    "react-addons-update":"react-addons-update_requireJS",
+    "compiled\/tinymce":"compiled\/tinymce.js?v2",
+    "demo_site":"plugins\/demo_site",
+    "migration_tool":"plugins\/migration_tool",
+    "catalog_provisioner":"plugins\/catalog_provisioner",
+    "instructure_misc_plugin":"plugins\/instructure_misc_plugin",
+    "analytics":"plugins\/analytics",
+    "multiple_root_accounts":"plugins\/multiple_root_accounts",
+    "canvasnet_registration":"plugins\/canvasnet_registration",
+    "compiled\/bundles\/modules\/content_migration_setup_without_extensions":"compiled\/bundles\/modules\/content_migration_setup",
+    "compiled\/bundles\/modules\/content_migration_setup":"compiled\/bundles\/modules\/content_migration_setup_with_extensions",
+    "compiled\/registration\/main_without_extensions":"compiled\/registration\/main",
+    "compiled\/registration\/main":"compiled\/registration\/main_with_extensions",
+    "compiled\/registration\/signupDialog_without_extensions":"compiled\/registration\/signupDialog",
+    "compiled\/registration\/signupDialog":"compiled\/registration\/signupDialog_with_extensions",
+    "compiled\/bundles\/modules\/account_quota_settings_without_extensions":"compiled\/bundles\/modules\/account_quota_settings",
+    "compiled\/bundles\/modules\/account_quota_settings":"compiled\/bundles\/modules\/account_quota_settings_with_extensions",
+    "canvas_quizzes":"client_apps\/canvas_quizzes",
+    "app\/config\/environments\/production":"empty:"},
+      packages : [{"name":"ember-qunit","location":"bower\/ember-qunit\/dist\/amd"},{"name":"classnames","location":"symlink_to_node_modules\/classnames","main":"index"},{"name":"color-slicer","location":"symlink_to_node_modules\/color-slicer","main":"dist\/color-slicer"},{"name":"d3","location":"symlink_to_node_modules\/d3","main":"d3"},{"name":"fullcalendar","location":"symlink_to_node_modules\/fullcalendar","main":"dist\/fullcalendar"},{"name":"ic-ajax","location":"symlink_to_node_modules\/ic-ajax\/dist\/amd"},{"name":"ic-tabs","location":"symlink_to_node_modules\/ic-tabs"},{"name":"instructure-ui","location":"symlink_to_node_modules\/instructure-ui\/dist","main":"instructure-ui"},{"name":"instructure-icons","location":"symlink_to_node_modules\/instructure-icons","main":"react\/index"},{"name":"lodash","location":"symlink_to_node_modules\/lodash","main":"lodash"},{"name":"page","location":"symlink_to_node_modules\/page","main":"page"},{"name":"qs","location":"symlink_to_node_modules\/qs","main":"dist\/qs"},{"name":"react","location":"symlink_to_node_modules\/react","main":"dist\/react-with-addons"},{"name":"react-dom","location":"symlink_to_node_modules\/react-dom","main":"dist\/react-dom"},{"name":"react-dnd","location":"symlink_to_node_modules\/react-dnd","main":"dist\/ReactDnD.min"},{"name":"react-dnd-html5-backend","location":"symlink_to_node_modules\/react-dnd-html5-backend","main":"dist\/ReactDnDHTML5Backend.min"},{"name":"react-redux","location":"symlink_to_node_modules\/react-redux","main":"dist\/react-redux.min"},{"name":"react-select-box","location":"symlink_to_node_modules\/react-select-box","main":"dist\/react-select-box"},{"name":"react-tokeninput","location":"symlink_to_node_modules\/react-tokeninput","main":"dist\/react-tokeninput"},{"name":"react-tabs","location":"symlink_to_node_modules\/react-tabs","main":"dist\/react-tabs"},{"name":"react-tray","location":"symlink_to_node_modules\/react-tray","main":"dist\/react-tray"},{"name":"redux","location":"symlink_to_node_modules\/redux","main":"dist\/redux"},{"name":"redux-actions","location":"symlink_to_node_modules\/redux-actions","main":"dist\/redux-actions.min"},{"name":"redux-logger","location":"symlink_to_node_modules\/redux-logger","main":"dist\/index"},{"name":"redux-thunk","location":"symlink_to_node_modules\/redux-thunk","main":"dist\/redux-thunk"},{"name":"tinymce","location":"symlink_to_node_modules\/tinymce","main":"tinymce"},{"name":"spin.js","location":"symlink_to_node_modules\/spin.js","main":"spin"}],
+      shim: {
+    'ember': {
+      deps: ['jquery', 'handlebars'],
+      exports: 'Ember'
+    },
+    'vendor/FileAPI/FileAPI.min': {
+      deps: ['jquery', 'vendor/FileAPI/config'],
+      exports: 'FileAPI'
+    },
+    'fullcalendar/dist/lang-all': {
+      deps: ['fullcalendar']
+    },
+    'vendor/bootstrap-select/bootstrap-select' : { deps: ['jquery'] },
+    'vendor/jquery.jcrop': { deps: ['jquery'] },
+    'vendor/md5': {
+      exports: 'CryptoJS'
+    },
+    'vendor/i18n': {
+      exports: 'I18n'
+    },
+
+    'handlebars': {
+      exports: 'Handlebars'
+    },
+
+    'tinymce/tinymce' : { exports: 'tinymce'},
+    'tinymce/plugins/autolink/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/media/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/paste/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/table/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/textcolor/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/link/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/directionality/plugin' : { deps: ['tinymce'] },
+    'tinymce/plugins/lists/plugin' : { deps: ['tinymce'] },
+    'tinymce/themes/modern/theme' : { deps: ['tinymce'] },
+  }
+,
+      map: {"canvas_quizzes":{"lodash":"underscore","node_modules-version-of-backbone":"symlink_to_node_modules\/backbone\/backbone","backbone":"Backbone","jquery\/instructure_date_and_time":"jquery.instructure_date_and_time"},"*":{"spin":"spin.js\/spin"}},
+      waitSeconds: 60
+    };
+</script>
+
+  <script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/require-749d0c60e9.js.download"></script>
+
+<script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/common-975eeaecad.js.download"></script>
+<script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/quiz_show-05de9df2f7.js.download"></script>
+<script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/quiz_submission-2deb982906.js.download"></script>
+<script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/navigation_header-46a40a8f47.js.download"></script>
+<script>
+//<![CDATA[
+          require(['jquery'], function () {
+            ["https:\/\/instructure-uploads-2.s3.amazonaws.com\/account_20000000000014\/attachments\/57597251\/uofu_canvas_global.js?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA\u0026Expires=1941103903\u0026Signature=N9fG6fPkdSQo4S4SqME%2F6Rz6r5s%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public\u0026response-expires=473364000.0"].forEach(function (src) {
+              var s = document.createElement('script');
+              s.src = src;
+              document.body.appendChild(s);
+            });
+          });
+
+//]]>
+</script>
+
+
+
+  <script>
+  // Determines if the scripts are loaded.
+  // When we get everything out of the views, and have a single top-level
+  // `require`, this becomes meaningless and will be abandoned.
+  (function() {
+    var attempts = 0;
+    var timeout = 10;
+    var check = function() {
+      attempts++;
+      var done = !window.requirejs.s.contexts._.defQueue.length
+      var giveup = attempts === 100; // 1 second
+      if (done || giveup) {
+        var className = document.documentElement.className;
+        document.documentElement.className = className.replace(/scripts-not-loaded/, '');
+        return;
+      }
+      setTimeout(check, timeout);
+    };
+
+    check();
+  }).call(this);
+  </script>
+
+
+</div> <!-- #application -->
+
+
+<script src="./PS8-1_ CS 4150-001 Fall 2016 Algorithms_files/uofu_canvas_global.js.download"></script><div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
